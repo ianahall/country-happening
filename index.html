@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Happening</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header class="site-header">
+      <h1 class="site-title">Country Happening</h1>
+      <p class="site-subtitle">Ian &amp; Kellyn Are Getting Hitched</p>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="wedding.html">Our Wedding</a></li>
+          <li><a href="itinerary.html">Itinerary</a></li>
+          <li><a href="getting-there.html">Getting There</a></li>
+          <li><a href="having-fun.html">Having Fun</a></li>
+          <li><a href="rsvp.html">RSVP</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-content">
+      <!-- Dog illustration — front and back swap every 10 seconds -->
+      <div class="hero-dog" style="position:relative; margin: 0 -60px;">
+        <img class="dog-front" src="images/white_front.jpg" alt="Tay, the dog, peeking over a fence from the front" style="width:100%; display:block;">
+        <img class="dog-back"  src="images/white_back.jpg"  alt="Tay, the dog, seen from the back" style="position:absolute;top:0;left:0;width:100%;opacity:0;">
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="site-footer-nav" aria-label="Footer primary">
+        <ul>
+          <li><a href="wedding.html">Our Wedding</a></li>
+          <li><a href="itinerary.html">Itinerary</a></li>
+          <li><a href="getting-there.html">Getting There</a></li>
+          <li><a href="having-fun.html">Having Fun</a></li>
+          <li><a href="rsvp.html">RSVP</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer-nav" aria-label="Footer secondary">
+        <ul>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="playlist.html">Playlist</a></li>
+          <li><a href="road-trip.html">Road Trip</a></li>
+          <li><a href="registry.html">Registry</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+      </nav>
+      <p class="footer-quote">"Sunset Scenes, West Virginia Blue Ridge Mountains, Shenandoah River" &mdash; John Denver</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Swap front/back dog illustration every 10 seconds
+    const front = document.querySelector('.dog-front');
+    const back  = document.querySelector('.dog-back');
+    let showingFront = true;
+
+    setInterval(() => {
+      if (showingFront) {
+        back.style.transition  = 'opacity 1s ease';
+        front.style.transition = 'opacity 1s ease';
+        back.style.opacity  = '1';
+        front.style.opacity = '0';
+      } else {
+        back.style.opacity  = '0';
+        front.style.opacity = '1';
+      }
+      showingFront = !showingFront;
+    }, 10000);
+  </script>
+</body>
+</html>

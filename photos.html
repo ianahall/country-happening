@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos — Country Happening</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      display: block;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 28px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      background: none;
+      border: none;
+      font-family: inherit;
+    }
+    .lightbox-prev, .lightbox-next {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
+      border: none;
+      padding: 12px 18px;
+      font-family: inherit;
+    }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header class="site-header">
+      <h1 class="site-title">Country Happening</h1>
+      <p class="site-subtitle">Ian &amp; Kellyn Are Getting Hitched</p>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="wedding.html">Our Wedding</a></li>
+          <li><a href="itinerary.html">Itinerary</a></li>
+          <li><a href="getting-there.html">Getting There</a></li>
+          <li><a href="having-fun.html">Having Fun</a></li>
+          <li><a href="rsvp.html">RSVP</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-content" style="padding-top:16px;padding-bottom:0;">
+      <div class="photo-grid" id="photoGrid">
+        <img src="images/photos/IMG_3111.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/032_32.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_8411.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_7226.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_6611.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF3781.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF5328.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0413.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF2191-001.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/R1-03225-0024.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_2469.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/016_16.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_1390.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/1.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_1317.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_5976.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_6211.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_6634.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_8995.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_6177.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_8662.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0408.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0493.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_2171.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0441.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/017_17.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF3461.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0400.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_1314.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_4675.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_3462.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_5673.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/A00018_018.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_1994.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_6074.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF9071.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/007_7.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_3418.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0385.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_1588.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_5576.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_4830.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0671.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_3216.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/319858-R1-3.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/038_38.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_7105HALLOWEEN.png.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_4242.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0861.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/015_15.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0023.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0199.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF5311.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_7112.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/R1-01982-0004.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/R1-01982-0015.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_2115.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/022_22.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/hall112-R1-000-22-22A.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/wellington.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/2.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/DSCF7910.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/_MG_6888a.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/R1-03320-023A.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/R1-08753-0027.jpg" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0017.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0397.JPG" alt="Ian and Kellyn" loading="lazy">
+        <img src="images/photos/IMG_0419.JPG" alt="Ian and Kellyn" loading="lazy">
+      </div>
+    </main>
+
+    <footer class="site-footer" style="margin-top:40px;">
+      <nav class="site-footer-nav" aria-label="Footer primary">
+        <ul>
+          <li><a href="wedding.html">Our Wedding</a></li>
+          <li><a href="itinerary.html">Itinerary</a></li>
+          <li><a href="getting-there.html">Getting There</a></li>
+          <li><a href="having-fun.html">Having Fun</a></li>
+          <li><a href="rsvp.html">RSVP</a></li>
+        </ul>
+      </nav>
+      <nav class="site-footer-nav" aria-label="Footer secondary">
+        <ul>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="playlist.html">Playlist</a></li>
+          <li><a href="road-trip.html">Road Trip</a></li>
+          <li><a href="registry.html">Registry</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+      </nav>
+      <p class="footer-quote">"Sunset Scenes, West Virginia Blue Ridge Mountains, Shenandoah River" &mdash; John Denver</p>
+    </footer>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+    <img src="" alt="" id="lightboxImg">
+    <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+  </div>
+
+  <script>
+    const grid = document.getElementById('photoGrid');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const imgs = Array.from(grid.querySelectorAll('img'));
+    let current = 0;
+
+    function open(idx) {
+      current = idx;
+      lbImg.src = imgs[idx].src;
+      lbImg.alt = imgs[idx].alt;
+      lightbox.classList.add('open');
+    }
+
+    function close() { lightbox.classList.remove('open'); }
+
+    imgs.forEach((img, i) => img.addEventListener('click', () => open(i)));
+    document.getElementById('lightboxClose').addEventListener('click', close);
+    document.getElementById('lightboxPrev').addEventListener('click', () => open((current - 1 + imgs.length) % imgs.length));
+    document.getElementById('lightboxNext').addEventListener('click', () => open((current + 1) % imgs.length));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') open((current - 1 + imgs.length) % imgs.length);
+      if (e.key === 'ArrowRight') open((current + 1) % imgs.length);
+    });
+  </script>
+</body>
+</html>
