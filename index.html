@@ -23,15 +23,16 @@
       </nav>
     </header>
 
-    <main class="site-content">
-      <!-- Dog illustration — front and back swap every 10 seconds -->
-      <div class="hero-dog" style="position:relative; margin: 0 -60px;">
-        <img class="dog-front" src="images/white_front.jpg" alt="Tay, the dog, peeking over a fence from the front" style="width:100%; display:block;">
-        <img class="dog-back"  src="images/white_back.jpg"  alt="Tay, the dog, seen from the back" style="position:absolute;top:0;left:0;width:100%;opacity:0;">
+    <!-- Homepage: full-bleed dog illustration, no padding -->
+    <main class="site-content site-content--home">
+      <div class="hero-dog">
+        <img class="dog-front" src="images/white_front.jpg" alt="Tay, peeking over a fence from the front">
+        <img class="dog-back"  src="images/white_back.jpg"  alt="Tay, seen from the back">
       </div>
     </main>
 
     <footer class="site-footer">
+      <p class="footer-quote">&ldquo;Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River&hellip;&rdquo; &mdash; John Denver</p>
       <nav class="site-footer-nav" aria-label="Footer primary">
         <ul>
           <li><a href="wedding.html">Our Wedding</a></li>
@@ -50,26 +51,25 @@
           <li><a href="updates.html">Updates</a></li>
         </ul>
       </nav>
-      <p class="footer-quote">"Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River..." &mdash; John Denver</p>
     </footer>
 
   </div>
 
   <script>
-    // Swap front/back dog illustration every 10 seconds
+    // Swap front/back dog illustration every 10 seconds with a 1s crossfade
     const front = document.querySelector('.dog-front');
     const back  = document.querySelector('.dog-back');
     let showingFront = true;
 
     setInterval(() => {
+      front.style.transition = 'opacity 1s ease';
+      back.style.transition  = 'opacity 1s ease';
       if (showingFront) {
-        back.style.transition  = 'opacity 1s ease';
-        front.style.transition = 'opacity 1s ease';
-        back.style.opacity  = '1';
         front.style.opacity = '0';
+        back.style.opacity  = '1';
       } else {
-        back.style.opacity  = '0';
         front.style.opacity = '1';
+        back.style.opacity  = '0';
       }
       showingFront = !showingFront;
     }, 10000);

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="600" viewBox="0 0 200 600">
+  <g fill="none" stroke="#DDB8A5" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- ── PLANT 1: Tall Allium (globe flower) ─── -->
+    <line x1="90" y1="600" x2="90" y2="220" stroke-width="1.2"/>
+    <circle cx="90" cy="200" r="22" stroke-width="1.2"/>
+    <!-- radiating marks suggesting sphere -->
+    <line x1="90" y1="178" x2="90" y2="168" stroke-width="0.8"/>
+    <line x1="107" y1="183" x2="115" y2="174" stroke-width="0.8"/>
+    <line x1="112" y1="200" x2="122" y2="200" stroke-width="0.8"/>
+    <line x1="107" y1="217" x2="115" y2="226" stroke-width="0.8"/>
+    <line x1="73"  y1="217" x2="65"  y2="226" stroke-width="0.8"/>
+    <line x1="68"  y1="200" x2="58"  y2="200" stroke-width="0.8"/>
+    <line x1="73"  y1="183" x2="65"  y2="174" stroke-width="0.8"/>
+    <!-- leaves -->
+    <path d="M90,440 C70,426 56,406 48,383" stroke-width="1.1"/>
+    <path d="M90,375 C108,361 118,343 122,323" stroke-width="1.1"/>
+    <path d="M90,315 C72,303 60,286 54,267" stroke-width="1.1"/>
+
+    <!-- ── PLANT 2: Thistle – left ─── -->
+    <line x1="30" y1="600" x2="30" y2="265" stroke-width="1.2"/>
+    <ellipse cx="30" cy="252" rx="11" ry="19" stroke-width="1.2"/>
+    <!-- spiky crown -->
+    <path d="M19,252 C25,232 30,226 30,226 C30,226 35,232 41,252" stroke-width="0.9"/>
+    <line x1="30"  y1="226" x2="30"  y2="215" stroke-width="0.9"/>
+    <line x1="22"  y1="231" x2="16"  y2="223" stroke-width="0.9"/>
+    <line x1="38"  y1="231" x2="44"  y2="223" stroke-width="0.9"/>
+    <!-- leaves -->
+    <path d="M30,475 C12,461 2,440 -2,418"    stroke-width="1.1"/>
+    <path d="M30,405 C46,391 56,372 58,352"   stroke-width="1.1"/>
+    <path d="M30,355 C14,343 4,326 0,306"     stroke-width="1.1"/>
+
+    <!-- ── PLANT 3: Queen Anne's Lace / compound umbel – right ─── -->
+    <line x1="162" y1="600" x2="162" y2="312" stroke-width="1.2"/>
+    <!-- branching arms -->
+    <line x1="162" y1="312" x2="132" y2="289" stroke-width="1"/>
+    <line x1="162" y1="312" x2="147" y2="282" stroke-width="1"/>
+    <line x1="162" y1="312" x2="162" y2="279" stroke-width="1"/>
+    <line x1="162" y1="312" x2="177" y2="282" stroke-width="1"/>
+    <line x1="162" y1="312" x2="192" y2="289" stroke-width="1"/>
+    <!-- tiny cluster heads at tips -->
+    <circle cx="132" cy="287" r="5"   stroke-width="0.9"/>
+    <circle cx="147" cy="280" r="5.5" stroke-width="0.9"/>
+    <circle cx="162" cy="277" r="7"   stroke-width="0.9"/>
+    <circle cx="177" cy="280" r="5.5" stroke-width="0.9"/>
+    <circle cx="192" cy="287" r="5"   stroke-width="0.9"/>
+    <!-- leaves -->
+    <path d="M162,492 C144,478 132,458 126,436" stroke-width="1.1"/>
+    <path d="M162,422 C179,408 188,389 190,369" stroke-width="1.1"/>
+
+    <!-- ── PLANT 4: Small wildflower – far left ─── -->
+    <line x1="8" y1="600" x2="8" y2="500" stroke-width="1"/>
+    <circle cx="8" cy="492" r="9" stroke-width="0.9"/>
+    <line x1="8"  y1="483" x2="8"  y2="476" stroke-width="0.7"/>
+    <line x1="15" y1="485" x2="20" y2="479" stroke-width="0.7"/>
+    <line x1="17" y1="492" x2="24" y2="492" stroke-width="0.7"/>
+    <line x1="15" y1="499" x2="20" y2="505" stroke-width="0.7"/>
+    <line x1="1"  y1="499" x2="-4" y2="505" stroke-width="0.7"/>
+    <line x1="-1" y1="492" x2="-8" y2="492" stroke-width="0.7"/>
+    <line x1="1"  y1="485" x2="-4" y2="479" stroke-width="0.7"/>
+
+    <!-- ── PLANT 5: Small round-head plant – far right ─── -->
+    <line x1="190" y1="600" x2="190" y2="522" stroke-width="1"/>
+    <circle cx="190" cy="514" r="8" stroke-width="0.9"/>
+    <line x1="190" y1="506" x2="190" y2="499" stroke-width="0.7"/>
+    <line x1="196" y1="508" x2="201" y2="502" stroke-width="0.7"/>
+    <line x1="184" y1="508" x2="179" y2="502" stroke-width="0.7"/>
+
+    <!-- ── PLANT 6: Wispy feathery stem – mid-left ─── -->
+    <line x1="60" y1="600" x2="60" y2="398" stroke-width="1.1"/>
+    <path d="M60,398 C48,378 44,358 46,338" stroke-width="0.9"/>
+    <path d="M60,398 C60,373 60,348 60,323"  stroke-width="0.9"/>
+    <path d="M60,398 C72,378 76,358 74,338"  stroke-width="0.9"/>
+    <circle cx="46" cy="336" r="3" stroke-width="0.8"/>
+    <circle cx="60" cy="321" r="3" stroke-width="0.8"/>
+    <circle cx="74" cy="336" r="3" stroke-width="0.8"/>
+
+    <!-- ── PLANT 7: Short daisy stem – mid-right ─── -->
+    <line x1="118" y1="600" x2="118" y2="534" stroke-width="1"/>
+    <circle cx="118" cy="526" r="8" stroke-width="0.9"/>
+    <line x1="118" y1="518" x2="118" y2="511" stroke-width="0.7"/>
+    <line x1="125" y1="520" x2="130" y2="514" stroke-width="0.7"/>
+    <line x1="127" y1="527" x2="134" y2="527" stroke-width="0.7"/>
+    <line x1="111" y1="520" x2="106" y2="514" stroke-width="0.7"/>
+    <line x1="109" y1="527" x2="102" y2="527" stroke-width="0.7"/>
+
+    <!-- ── Grass blades at base ─── -->
+    <path d="M48,600  Q53,572 46,546"  stroke-width="0.9"/>
+    <path d="M74,600  Q67,568 72,540"  stroke-width="0.9"/>
+    <path d="M138,600 Q143,570 139,543" stroke-width="0.9"/>
+    <path d="M155,600 Q162,566 158,538" stroke-width="0.9"/>
+    <path d="M176,600 Q184,568 180,542" stroke-width="0.9"/>
+
+    <!-- ── Low leaf cluster – center base ─── -->
+    <path d="M90,580 C74,568 64,552 60,534"  stroke-width="0.9"/>
+    <path d="M90,560 C106,548 116,532 120,514" stroke-width="0.9"/>
+
+  </g>
+</svg>

@@ -20,31 +20,32 @@ body::after {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 200px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='800' viewBox='0 0 200 800'%3E%3Cg fill='none' stroke='%23B85C4C' stroke-width='1.2' opacity='0.6'%3E%3C!-- Tall stem with leaves --%3E%3Cline x1='40' y1='800' x2='40' y2='300'/%3E%3Cellipse cx='40' cy='300' rx='12' ry='18' stroke-width='1'/%3E%3Cline x1='40' y1='560' x2='20' y2='510'/%3E%3Cellipse cx='18' cy='505' rx='8' ry='12' stroke-width='1'/%3E%3Cline x1='40' y1='500' x2='62' y2='450'/%3E%3Cellipse cx='64' cy='445' rx='8' ry='12' stroke-width='1'/%3E%3Cline x1='40' y1='430' x2='15' y2='390'/%3E%3Cellipse cx='13' cy='384' rx='7' ry='10' stroke-width='1'/%3E%3C!-- Wildflower stem --%3E%3Cline x1='90' y1='800' x2='90' y2='400'/%3E%3Ccircle cx='90' cy='395' r='10' stroke-width='1'/%3E%3Cline x1='90' y1='430' x2='75' y2='390' stroke-width='0.8'/%3E%3Cline x1='90' y1='460' x2='108' y2='425' stroke-width='0.8'/%3E%3Cline x1='90' y1='510' x2='70' y2='475' stroke-width='0.8'/%3E%3C!-- Thistle --%3E%3Cline x1='150' y1='800' x2='150' y2='350'/%3E%3Cellipse cx='150' cy='345' rx='14' ry='22' stroke-width='1.2'/%3E%3Cpath d='M 136 345 Q 140 330 150 325 Q 160 330 164 345' stroke-width='0.8'/%3E%3Cline x1='150' y1='500' x2='130' y2='455'/%3E%3Cellipse cx='128' cy='450' rx='7' ry='10'/%3E%3Cline x1='150' y1='450' x2='172' y2='415'/%3E%3Cellipse cx='174' cy='410' rx='7' ry='10'/%3E%3C!-- Small stems --%3E%3Cline x1='120' y1='800' x2='120' y2='550'/%3E%3Ccircle cx='120' cy='548' r='5' stroke-width='0.8'/%3E%3Cline x1='170' y1='800' x2='170' y2='600'/%3E%3Ccircle cx='170' cy='598' r='4' stroke-width='0.8'/%3E%3Cline x1='60' y1='800' x2='60' y2='650'/%3E%3C!-- Horizontal wavy grass lines --%3E%3Cpath d='M 0 750 Q 25 745 50 750 Q 75 755 100 750 Q 125 745 150 750 Q 175 755 200 750' stroke-width='0.8'/%3E%3Cpath d='M 0 770 Q 30 765 60 770 Q 90 775 120 770 Q 150 765 180 770 Q 190 775 200 770' stroke-width='0.8'/%3E%3Cpath d='M 0 790 Q 20 785 40 790 Q 70 795 100 790 Q 130 785 160 790 Q 180 795 200 790' stroke-width='0.8'/%3E%3C/g%3E%3C!-- Upper section repeat --%3E%3Cg fill='none' stroke='%23B85C4C' stroke-width='1.2' opacity='0.6' transform='translate(0,-800)'%3E%3Cline x1='40' y1='800' x2='40' y2='300'/%3E%3Cellipse cx='40' cy='300' rx='12' ry='18' stroke-width='1'/%3E%3Cline x1='40' y1='560' x2='20' y2='510'/%3E%3Cline x1='40' y1='500' x2='62' y2='450'/%3E%3Cline x1='90' y1='800' x2='90' y2='400'/%3E%3Ccircle cx='90' cy='395' r='10' stroke-width='1'/%3E%3Cline x1='150' y1='800' x2='150' y2='350'/%3E%3Cellipse cx='150' cy='345' rx='14' ry='22' stroke-width='1.2'/%3E%3Cline x1='120' y1='800' x2='120' y2='550'/%3E%3Ccircle cx='120' cy='548' r='5' stroke-width='0.8'/%3E%3Cpath d='M 0 750 Q 25 745 50 750 Q 75 755 100 750 Q 125 745 150 750 Q 175 755 200 750' stroke-width='0.8'/%3E%3C/g%3E%3C/svg%3E");
+  width: 220px;
+  background-image: url('../images/botanical-pattern.svg');
   background-repeat: repeat-y;
   background-size: 200px auto;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.85;
 }
 
-body::before { left: 0; }
+body::before { left: 0; background-position: left top; }
 body::after  { right: 0; transform: scaleX(-1); }
 
 /* ─── Page Wrapper ──────────────────────────────────────────── */
 .page-wrapper {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 840px;
   margin: 0 auto;
   background: #fff;
-  box-shadow: 0 2px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 0 60px rgba(0,0,0,0.12);
   min-height: 100vh;
 }
 
 /* ─── Site Header ───────────────────────────────────────────── */
 .site-header {
-  padding: 48px 40px 0;
+  padding: 44px 40px 0;
   text-align: center;
 }
 
@@ -68,23 +69,40 @@ body::after  { right: 0; transform: scaleX(-1); }
 
 .site-subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #888;
-  margin-bottom: 28px;
+  color: #999;
+  margin-bottom: 24px;
 }
 
 /* ─── Navigation ────────────────────────────────────────────── */
+/* Nav spans full header width with decorative lines on each side */
 .site-nav {
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 12px 0;
-  margin: 0 40px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 13px 0;
 }
 
-.site-nav ul,
+.site-nav::before,
+.site-nav::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 0 18px;
+}
+
 .site-footer-nav ul {
   list-style: none;
   display: flex;
@@ -99,22 +117,25 @@ body::after  { right: 0; transform: scaleX(-1); }
   align-items: center;
 }
 
+/* Pipe separators */
 .site-nav ul li:not(:last-child)::after,
 .site-footer-nav ul li:not(:last-child)::after {
-  content: '·';
-  color: #bbb;
+  content: '|';
+  color: #ccc;
   margin: 0 10px;
-  font-size: 0.75rem;
+  font-size: 0.55rem;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .site-nav a,
 .site-footer-nav a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #444;
+  color: #555;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -131,49 +152,37 @@ body::after  { right: 0; transform: scaleX(-1); }
   padding: 40px 60px 60px;
 }
 
-/* ─── Hero Dog Animation ────────────────────────────────────── */
+/* Homepage: no padding — dog illustration is full-bleed */
+.site-content--home {
+  padding: 0;
+}
+
+/* ─── Hero Dog Animation (homepage) ────────────────────────── */
 .hero-dog {
   position: relative;
-  text-align: center;
-  margin: 0 -60px;
+  line-height: 0; /* remove gap below inline images */
 }
 
-.hero-dog img {
-  width: 100%;
+/* Front image stays in normal flow to define container height */
+.hero-dog .dog-front {
   display: block;
+  width: 100%;
 }
 
-.hero-dog .dog-front,
+/* Back image overlays on top, hidden by default; JS swaps opacity */
 .hero-dog .dog-back {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.hero-dog .dog-back {
-  animation: dogSwap 20s infinite;
-}
-
-.hero-dog .dog-front {
-  animation: dogSwapFront 20s infinite;
-}
-
-@keyframes dogSwap {
-  0%, 45%   { opacity: 0; }
-  50%, 95%  { opacity: 1; }
-  100%      { opacity: 0; }
-}
-
-@keyframes dogSwapFront {
-  0%, 45%   { opacity: 1; }
-  50%, 95%  { opacity: 0; }
-  100%      { opacity: 1; }
+  display: block;
+  opacity: 0;
 }
 
 /* ─── Content Typography ────────────────────────────────────── */
 .site-content h1 {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   letter-spacing: 0.04em;
@@ -194,9 +203,9 @@ body::after  { right: 0; transform: scaleX(-1); }
 
 .site-content h3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  color: #888;
+  color: #999;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-align: center;
@@ -255,7 +264,7 @@ body::after  { right: 0; transform: scaleX(-1); }
   margin-bottom: 8px;
 }
 
-/* ─── Page Hero Image ───────────────────────────────────────── */
+/* ─── Page Hero Image (inner pages) ────────────────────────── */
 .page-hero {
   margin: 0 -60px 32px;
 }
@@ -411,7 +420,7 @@ body::after  { right: 0; transform: scaleX(-1); }
   margin-bottom: 14px;
 }
 
-/* ─── Updates ───────────────────────────────────────────────── */
+/* ─── Updates / Blog Posts ──────────────────────────────────── */
 .post-item {
   margin-bottom: 48px;
   padding-bottom: 48px;
@@ -503,27 +512,26 @@ body::after  { right: 0; transform: scaleX(-1); }
 
 /* ─── Site Footer ───────────────────────────────────────────── */
 .site-footer {
-  padding: 28px 40px 40px;
+  padding: 22px 40px 36px;
   text-align: center;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #e8e8e8;
 }
 
 .site-footer-nav {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .site-footer-nav + .site-footer-nav {
-  margin-top: 10px;
   margin-bottom: 0;
 }
 
 .footer-quote {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #bbb;
-  margin-top: 20px;
-  letter-spacing: 0.04em;
+  margin: 18px 0 14px;
+  letter-spacing: 0.03em;
 }
 
 /* ─── Road Trip Stops ───────────────────────────────────────── */
@@ -539,15 +547,17 @@ body::after  { right: 0; transform: scaleX(-1); }
 }
 
 /* ─── Responsive ────────────────────────────────────────────── */
-@media (max-width: 820px) {
+@media (max-width: 900px) {
   body::before, body::after { display: none; }
   .page-wrapper { box-shadow: none; }
+}
+
+@media (max-width: 820px) {
   .site-content { padding: 30px 30px 50px; }
-  .page-hero, .hero-dog { margin: 0 -30px 28px; }
+  .page-hero { margin: 0 -30px 28px; }
   .photo-grid { margin: 0 -30px; grid-template-columns: repeat(2, 1fr); }
-  .site-header { padding: 36px 30px 0; }
-  .site-nav { margin: 0 30px; }
-  .site-footer { padding: 24px 30px 36px; }
+  .site-header { padding: 36px 24px 0; }
+  .site-footer { padding: 20px 24px 32px; }
   .itinerary-day { flex-direction: column; }
   .itinerary-day .day-image { flex: none; width: 100%; }
   .playlist-embed { flex-direction: column; }
