@@ -8,29 +8,14 @@ html { font-size: 16px; }
 body {
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
   background-color: #C96B5A;
-  min-height: 100vh;
+  background-image: url('../images/wedding-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;   /* scale to viewport width so the image fills the sides */
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 360px;        /* reveal background below the white panel */
 }
-
-/* ─── Botanical Side Patterns ───────────────────────────────── */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 220px;
-  background-image: url('../images/botanical-pattern.svg');
-  background-repeat: repeat-y;
-  background-size: 200px auto;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.85;
-}
-
-body::before { left: 0; background-position: left top; }
-body::after  { right: 0; transform: scaleX(-1); }
 
 /* ─── Page Wrapper ──────────────────────────────────────────── */
 .page-wrapper {
@@ -40,7 +25,6 @@ body::after  { right: 0; transform: scaleX(-1); }
   margin: 0 auto;
   background: #fff;
   box-shadow: 0 0 60px rgba(0,0,0,0.12);
-  min-height: 100vh;
 }
 
 /* ─── Site Header ───────────────────────────────────────────── */
