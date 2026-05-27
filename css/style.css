@@ -57,6 +57,15 @@ body::after  { right: 0; transform: scaleX(-1); }
   margin-bottom: 6px;
 }
 
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: #C96B5A;
+}
+
 .site-subtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
