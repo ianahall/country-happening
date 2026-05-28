@@ -29,17 +29,17 @@ body {
 
 /* ─── Site Header ───────────────────────────────────────────── */
 .site-header {
-  padding: 44px 40px 0;
+  padding: 56px 60px 0;
   text-align: center;
 }
 
 .site-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: 3rem;
+  font-size: 4.2rem;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #222;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
 
 .site-title a {
@@ -53,12 +53,12 @@ body {
 
 .site-subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.58rem;
+  font-size: 0.62rem;
   font-weight: 500;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: #999;
-  margin-bottom: 24px;
+  margin-bottom: 38px;
 }
 
 /* ─── Navigation ────────────────────────────────────────────── */
@@ -67,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 13px 0;
+  padding: 18px 0;
 }
 
 .site-nav::before,
@@ -106,8 +106,8 @@ body {
 .site-footer-nav ul li:not(:last-child)::after {
   content: '|';
   color: #ccc;
-  margin: 0 10px;
-  font-size: 0.55rem;
+  margin: 0 14px;
+  font-size: 0.6rem;
   font-weight: 300;
   line-height: 1;
 }
@@ -115,9 +115,9 @@ body {
 .site-nav a,
 .site-footer-nav a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #555;
   text-decoration: none;
@@ -496,13 +496,13 @@ body {
 
 /* ─── Site Footer ───────────────────────────────────────────── */
 .site-footer {
-  padding: 28px 40px 40px;
+  padding: 36px 60px 52px;
   text-align: center;
   border-top: 1px solid #e8e8e8;
 }
 
 .site-footer-nav {
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 .site-footer-nav + .site-footer-nav {
@@ -512,11 +512,11 @@ body {
 .footer-quote {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   color: #bbb;
-  margin: 0 0 20px;
-  letter-spacing: 0.03em;
-  line-height: 1.6;
+  margin: 0 0 28px;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
 }
 
 /* ─── Road Trip Stops ───────────────────────────────────────── */
@@ -551,8 +551,9 @@ body {
   .site-content { padding: 30px 30px 50px; }
   .page-hero { margin: 0 -30px 28px; }
   .photo-grid { margin: 0 -30px; grid-template-columns: repeat(2, 1fr); }
-  .site-header { padding: 36px 24px 0; }
-  .site-footer { padding: 20px 24px 32px; }
+  .site-header { padding: 36px 28px 0; }
+  .site-title { font-size: 3rem; }
+  .site-footer { padding: 28px 28px 40px; }
   .itinerary-day { flex-direction: column; }
   .itinerary-day .day-image { flex: none; width: 100%; }
   .playlist-embed { flex-direction: column; }
@@ -560,6 +561,6 @@ body {
 
 @media (max-width: 500px) {
   body { padding: 0; }
-  .site-title { font-size: 2.2rem; }
+  .site-title { font-size: 2.4rem; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); }
 }
