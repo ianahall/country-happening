@@ -14,14 +14,14 @@ body {
   background-size: 100% auto;   /* scale to viewport width so the image fills the sides */
   position: relative;
   overflow-x: hidden;
-  padding: 100px 20px;          /* equal space on all four sides around the white panel */
+  padding: 100px;               /* equal space on all four sides around the white panel */
 }
 
 /* ─── Page Wrapper ──────────────────────────────────────────── */
 .page-wrapper {
   position: relative;
   z-index: 1;
-  max-width: 880px;
+  max-width: 1140px;
   margin: 0 auto;
   background: #fff;
   box-shadow: 0 0 60px rgba(0,0,0,0.18);
@@ -532,13 +532,17 @@ body {
 }
 
 /* ─── Responsive ────────────────────────────────────────────── */
-@media (max-width: 1080px) {
-  /* Keep some breathing room but let side padding shrink */
-  body { padding: 60px 14px; }
+@media (max-width: 1360px) {
+  /* Panel hits max-width; keep 60px side strips of coral */
+  body { padding: 100px 60px; }
+}
+
+@media (max-width: 1100px) {
+  body { padding: 80px 40px; }
 }
 
 @media (max-width: 900px) {
-  body { padding: 40px 10px; }
+  body { padding: 40px 20px; }
   .page-wrapper { box-shadow: none; }
 }
 
