@@ -24,17 +24,20 @@
     </header>
 
     <main class="site-content">
-      <div class="playlist-embed">
-        <div class="album-art">
-          <img src="images/cd.jpg" alt="West Virginia Wedding playlist">
+      <div class="playlist-layout">
+        <!-- Left: album art (283×283) + title/description stacked below -->
+        <div class="playlist-embed">
+          <div class="album-art">
+            <img src="images/cd.jpg" alt="West Virginia Wedding playlist">
+          </div>
+          <div class="album-info">
+            <p class="playlist-title">West Virginia Wedding</p>
+            <p>The official soundtrack to the Country Happening.</p>
+          </div>
         </div>
-        <div class="album-info">
-          <p class="playlist-title">West Virginia Wedding</p>
-          <p>The official soundtrack to the Country Happening.</p>
-        </div>
-      </div>
 
-      <ul class="tracklist">
+        <!-- Right: tracklist (fills remaining width) -->
+        <ul class="tracklist">
         <li>
           <div class="track-info">
             Take Me Home, Country Roads
@@ -133,9 +136,11 @@
           </div>
           <span class="track-duration">3:37</span>
         </li>
-      </ul>
+        </ul>
+      </div><!-- /.playlist-layout -->
     </main>
 
+    <p class="footer-quote">&ldquo;Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River&hellip;&rdquo; &mdash; John Denver</p>
     <footer class="site-footer">
       <nav class="site-footer-nav" aria-label="Footer primary">
         <ul>
@@ -155,7 +160,6 @@
           <li><a href="updates.html">Updates</a></li>
         </ul>
       </nav>
-      <p class="footer-quote">"Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River..." &mdash; John Denver</p>
     </footer>
 
   </div>

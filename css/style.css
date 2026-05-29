@@ -340,62 +340,99 @@ body {
 }
 
 /* ─── Photo Gallery ──────────────────────────────────────────────── */
+/* Original: .image-list single-column stacked, 28px gap between images */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin: 0 -100px;
+  display: block;
 }
 
 .photo-grid img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
   display: block;
+  /* natural aspect ratio — no forced square crop */
+  margin-bottom: 28px;   /* exact computed: ~28px gap between images */
   cursor: pointer;
   transition: opacity 0.2s;
 }
 
+.photo-grid img:last-child { margin-bottom: 0; }
+
 .photo-grid img:hover { opacity: 0.88; }
 
 /* ─── Playlist ───────────────────────────────────────────────────── */
-.playlist-embed {
+/* .playlist-layout replicates original float: left (283px) + float: right (515px) */
+.playlist-layout {
   display: flex;
-  gap: 24px;
+  gap: 60px;             /* exact computed: 858 − 283 − 515 = 60px */
   align-items: flex-start;
-  margin-bottom: 32px;
 }
 
-.playlist-embed .album-art { flex: 0 0 140px; }
-.playlist-embed .album-art img { width: 100%; display: block; border: 1px solid #eee; }
+/* Left column: album art (283px square) + title/description stacked below */
+.playlist-embed {
+  flex: 0 0 283px;       /* exact computed: header.album-info width = 283px */
+  display: block;
+}
+
+.playlist-embed .album-art img {
+  width: 283px;          /* exact computed */
+  height: 283px;         /* exact computed — square crop */
+  object-fit: cover;
+  display: block;
+}
 
 .playlist-embed .album-info .playlist-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-size: 21px;       /* exact computed */
+  font-weight: 600;      /* exact computed */
   text-transform: uppercase;
-  color: #444;
-  margin-bottom: 2px;
+  line-height: 1.2;      /* = 25.2px: exact computed */
+  color: var(--color-text);
+  letter-spacing: 0;
+  margin: 8px 0 4px;
 }
 
-.playlist-embed .album-info p { font-size: 0.75rem; color: #888; }
+.playlist-embed .album-info p {
+  font-size: 14px;
+  color: var(--color-text-medium);
+  line-height: 1.8;
+}
 
-.tracklist { list-style: none; padding: 0; }
+/* Right column: tracklist fills remaining width */
+.tracklist {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
 
 .tracklist li {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 0.82rem;
-  color: #333;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);  /* exact computed: .bg.bar */
 }
 
-.tracklist li .track-artist { font-size: 0.72rem; color: #999; margin-top: 2px; }
-.tracklist li .track-info { flex: 1; }
-.tracklist li .track-duration { color: #bbb; font-size: 0.72rem; margin-left: 12px; }
+/* Song title (maps to a.link in original) */
+.tracklist li .track-info {
+  font-size: 16px;                  /* exact computed: a.link font-size */
+  color: rgba(0, 0, 0, 0.85);      /* exact computed */
+  flex: 1;
+}
+
+/* Artist name */
+.tracklist li .track-artist {
+  font-size: 13px;                  /* exact computed */
+  color: rgba(0, 0, 0, 0.5);       /* exact computed */
+  margin-top: 2px;
+}
+
+/* Duration */
+.tracklist li .track-duration {
+  font-size: 13px;                  /* exact computed */
+  color: rgba(0, 0, 0, 0.5);       /* exact computed */
+  margin-left: 12px;
+  white-space: nowrap;
+}
 
 /* ─── Registry ───────────────────────────────────────────────────── */
 .registry-orgs ol { padding-left: 20px; }
@@ -427,27 +464,30 @@ body {
 }
 
 /* ─── RSVP Form ──────────────────────────────────────────────────── */
-.form-field { margin-bottom: 20px; }
+.form-field { margin-bottom: 18px; }  /* exact computed: was 20px */
 
 .form-field label {
   display: block;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #666;
+  font-size: 14px;             /* exact computed: was 0.68rem ≈ 11px */
+  font-weight: 400;            /* exact computed: was 600 */
+  color: var(--color-text-medium);  /* rgba(28,28,28,0.8): exact computed */
   margin-bottom: 6px;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .form-field input,
 .form-field textarea {
   width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #ddd;
+  height: 38px;                /* exact computed */
+  padding: 10px;               /* exact computed */
+  border: 1px solid rgb(169, 169, 169);  /* exact computed: was #ddd */
+  border-radius: 0;            /* exact computed */
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-size: 14px;             /* exact computed */
   color: #333;
-  background: #fafafa;
+  background: rgb(250, 250, 250);  /* exact computed */
+  box-shadow: none;
   outline: none;
   transition: border-color 0.2s;
 }
@@ -455,7 +495,11 @@ body {
 .form-field input:focus,
 .form-field textarea:focus { border-color: var(--color-accent); }
 
-.form-field textarea { height: 100px; resize: vertical; }
+.form-field textarea {
+  height: auto;
+  min-height: 100px;           /* exact computed */
+  resize: vertical;
+}
 
 .form-row { display: flex; gap: 16px; }
 .form-row .form-field { flex: 1; }
@@ -463,14 +507,16 @@ body {
 .btn-submit {
   display: block;
   width: 100%;
-  padding: 14px;
-  background: #333;
+  height: 48px;                /* exact computed */
+  padding: 14px 35px;          /* exact computed: 14px top/bottom × 35px left/right */
+  background: rgb(39, 39, 39); /* exact computed: was #333 */
   color: #fff;
   border: none;
+  border-radius: 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-size: 14px;             /* exact computed */
+  font-weight: 400;            /* exact computed: was 600 */
+  letter-spacing: 2px;         /* exact computed */
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.2s;
@@ -556,9 +602,10 @@ body {
   .footer-quote { padding: 0 24px; }
   .site-nav     { margin-top: 28px; }
   .site-nav ul li + li { margin-left: 20px; }
+  .playlist-layout { flex-direction: column; }
+  .playlist-embed  { flex: none; width: 100%; }
   .itinerary-day { flex-direction: column; }
   .itinerary-day .day-image { flex: none; width: 100%; }
-  .playlist-embed { flex-direction: column; }
 }
 
 @media (max-width: 500px) {
