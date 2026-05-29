@@ -556,7 +556,20 @@ body {
 .site-footer {
   padding: 60px;           /* exact computed: 60px top/bottom */
   text-align: center;
-  border-top: 2px solid var(--color-border); /* exact computed: 2px */
+  position: relative;
+  /* border-top removed from element — line is rendered via ::before so it
+     can be inset 100px from each side, matching the content column edges */
+}
+
+/* Inset divider line: 100px from each panel edge, matching content padding */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100px;
+  right: 100px;
+  height: 2px;
+  background: var(--color-border); /* rgb(238,238,238) */
 }
 
 .site-footer-nav {
@@ -567,18 +580,18 @@ body {
   margin-bottom: 0;
 }
 
-/* John Denver quote — sits OUTSIDE footer, directly above footer border-top.
-   Gap from dog image: from .site-content--home margin-bottom: 52px (exact computed).
-   Gap to footer border: 0px — quote immediately precedes footer. */
+/* John Denver quote — sits OUTSIDE footer, directly above footer divider line.
+   Space above (from image): 100px via .site-content--home padding-bottom.
+   Space below (to divider): 100px via padding-bottom — equal = quote is centered. */
 .footer-quote {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 14px;             /* exact computed */
-  line-height: 1.8;            /* = 25.2px: exact computed */
-  color: var(--color-text-medium); /* rgba(28,28,28,0.8): exact computed */
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text-medium);
   text-align: center;
-  padding: 0 60px;             /* match footer horizontal padding */
-  margin: 0;                   /* no margin — gap provided by adjacent elements */
+  padding: 0 60px 100px;       /* 100px below = matches 100px above from image padding */
+  margin: 0;
   letter-spacing: 0.01em;
 }
 
@@ -610,7 +623,8 @@ body {
   .page-hero    { margin: 0 -24px 28px; }
   .photo-grid   { margin: 0 -24px; grid-template-columns: repeat(2, 1fr); }
   .site-footer  { padding: 40px 24px; }
-  .footer-quote { padding: 0 24px; }
+  .site-footer::before { left: 24px; right: 24px; }
+  .footer-quote { padding: 0 24px 40px; }
   .site-nav     { margin-top: 28px; }
   .site-nav ul li + li { margin-left: 20px; }
   .playlist-layout { flex-direction: column; }
