@@ -164,11 +164,9 @@ body {
   padding: 40px 100px 60px;
 }
 
-/* Homepage: no padding — dog illustration is full-bleed */
-/* margin-bottom: 52px = section#page margin-bottom: exact computed */
+/* Homepage: 100px padding insets Tay illustration from all panel edges */
 .site-content--home {
-  padding: 0;
-  margin-bottom: 52px;
+  padding: 100px;
 }
 
 /* ─── Hero Dog Animation (homepage) ─────────────────────────────── */
