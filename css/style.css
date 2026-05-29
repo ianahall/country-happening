@@ -268,16 +268,20 @@ body {
   margin: 17px 0;                        /* .sqs-block-horizontalrule padding: 17px: exact */
 }
 
-.site-content ol, .site-content ul {
+.site-content ol {
+  padding-left: 40px;    /* exact computed: was 22px */
+  margin-bottom: 16px;
+}
+.site-content ul {
   padding-left: 22px;
   margin-bottom: 16px;
 }
 
 .site-content li {
-  font-size: 0.88rem;
-  line-height: 1.75;
-  color: #444;
-  margin-bottom: 8px;
+  font-size: 14px;                       /* exact computed */
+  line-height: 1.8;                      /* = 25.2px: exact computed */
+  color: var(--color-text-medium);       /* rgba(28,28,28,0.8): exact computed */
+  margin-bottom: 0;                      /* exact computed: was 8px */
 }
 
 /* ─── Page Hero Image (inner pages) ─────────────────────────────── */
@@ -439,28 +443,36 @@ body {
 .registry-orgs li { margin-bottom: 14px; }
 
 /* ─── Updates / Blog Posts ───────────────────────────────────────── */
-.post-item {
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid #eee;
+/* No border between posts — original uses margin-top: 80px gap */
+.post-item { }
+
+.post-item + .post-item {
+  margin-top: 80px;   /* article.hentry + article.hentry margin-top: exact computed */
 }
 
-.post-item:last-child { border-bottom: none; }
-
-.post-meta {
-  font-size: 0.68rem;
-  color: #aaa;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
+/* Maps to .entry-title: 20px/600/3px/uppercase/centered */
 .post-title {
-  font-family: 'Lora', Georgia, serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--color-text);
-  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;            /* exact computed */
+  font-weight: 600;           /* exact computed */
+  letter-spacing: 3px;        /* exact computed */
+  text-transform: uppercase;  /* exact computed */
+  line-height: 1.2;           /* = 24px: exact computed */
+  color: var(--color-text);   /* rgb(28,28,28): exact computed */
+  text-align: center;         /* exact computed */
+  margin-bottom: 6px;         /* exact computed */
+}
+
+/* Maps to time.published: 12px/italic/rgba(28,28,28,0.4)/2px/centered */
+.post-meta {
+  font-size: 12px;                     /* exact computed: ~11.9px → 12px */
+  font-style: italic;                  /* exact computed */
+  font-weight: 400;                    /* exact computed */
+  letter-spacing: 2px;                 /* exact computed */
+  line-height: 1.8;                    /* = 25.2px: exact computed */
+  color: rgba(28, 28, 28, 0.4);        /* exact computed */
+  text-align: center;                  /* article header text-align: center */
+  margin-bottom: 45px;                 /* article header margin-bottom: 45px — gap to body */
 }
 
 /* ─── RSVP Form ──────────────────────────────────────────────────── */
@@ -566,14 +578,8 @@ body {
 }
 
 /* ─── Road Trip Stops ────────────────────────────────────────────── */
+/* h3 inside .stop-item inherits standard h3 styles (14px/300/2px/uppercase/rgb(28,28,28)) */
 .stop-item { margin-bottom: 32px; }
-
-.stop-item h3 {
-  text-align: left;
-  font-size: 0.75rem;
-  color: var(--color-accent);
-  margin-bottom: 4px;
-}
 
 /* ─── Responsive ─────────────────────────────────────────────────── */
 /* At viewports narrower than 1230px (1030+100+100), side margins shrink
