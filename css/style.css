@@ -157,8 +157,10 @@ body {
 }
 
 /* Homepage: no padding — dog illustration is full-bleed */
+/* margin-bottom: 52px = section#page margin-bottom: exact computed */
 .site-content--home {
   padding: 0;
+  margin-bottom: 52px;
 }
 
 /* ─── Hero Dog Animation (homepage) ─────────────────────────────── */
@@ -488,14 +490,18 @@ body {
   margin-bottom: 0;
 }
 
-/* John Denver quote */
+/* John Denver quote — sits OUTSIDE footer, directly above footer border-top.
+   Gap from dog image: from .site-content--home margin-bottom: 52px (exact computed).
+   Gap to footer border: 0px — quote immediately precedes footer. */
 .footer-quote {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 14px;                       /* exact computed */
-  line-height: 1.8;                      /* = 25.2px: exact computed */
-  color: var(--color-text-medium);       /* rgba(28,28,28,0.8): exact computed */
-  margin: 0 0 25.2px;                    /* margin-bottom: 25.2px: exact computed */
+  font-size: 14px;             /* exact computed */
+  line-height: 1.8;            /* = 25.2px: exact computed */
+  color: var(--color-text-medium); /* rgba(28,28,28,0.8): exact computed */
+  text-align: center;
+  padding: 0 60px;             /* match footer horizontal padding */
+  margin: 0;                   /* no margin — gap provided by adjacent elements */
   letter-spacing: 0.01em;
 }
 
