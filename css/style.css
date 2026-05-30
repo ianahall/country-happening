@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+/* Alice = site title (matches original). Lora = lead/intro paragraphs. Montserrat = all UI text. */
 
 /* ─── Design Tokens (exact values from Squarespace computed styles) ── */
 :root {
@@ -25,8 +26,8 @@ body {
   background-color: var(--color-bg);
   background-image: url('../images/wedding-background.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
+  background-position: 50% 0%;  /* exact computed */
+  background-size: cover;        /* exact computed */
   overflow-x: hidden;   /* also creates BFC so page-wrapper margins don't collapse */
   padding: 0;           /* body has no padding; white panel uses margin: 100px auto */
 }
@@ -38,22 +39,19 @@ body {
   max-width: var(--site-max-width);     /* 1030px: exact computed */
   margin: var(--site-margin) auto;      /* 100px top/bottom; auto = centered left/right */
   background: #fff;
-  border-left:  2px solid var(--color-border);
-  border-right: 2px solid var(--color-border);
-  /* No box-shadow: original has none */
+  /* No side borders: original #canvas has none */
 }
 
 /* ─── Site Header ────────────────────────────────────────────────── */
 .site-header {
-  padding: 56px 100px 0;   /* 100px sides = #canvas padding-left/right: exact computed */
+  padding: 56px 100px 0;
   text-align: center;
-  /* border-bottom acts as .page-divider (2px rule between header and content) */
-  border-bottom: 2px solid var(--color-border);
+  /* No border-bottom: original .top-divider is display:none */
 }
 
 /* ─── Site Title (h1.logo equivalent) ───────────────────────────── */
 .site-title {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Alice', Georgia, serif;  /* exact font: Alice (Google Fonts) */
   font-size: 82px;          /* exact computed */
   line-height: 1.2;         /* = 98.4px: exact computed */
   font-weight: 400;
@@ -554,22 +552,9 @@ body {
 
 /* ─── Site Footer (footer#footer equivalent) ─────────────────────── */
 .site-footer {
-  padding: 60px;           /* exact computed: 60px top/bottom */
+  padding: 60px 0;          /* 60px top/bottom; no side padding (content is centered inline) */
   text-align: center;
-  position: relative;
-  /* border-top removed from element — line is rendered via ::before so it
-     can be inset 100px from each side, matching the content column edges */
-}
-
-/* Inset divider line: 100px from each panel edge, matching content padding */
-.site-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 100px;
-  right: 100px;
-  height: 2px;
-  background: var(--color-border); /* rgb(238,238,238) */
+  border-top: 2px solid var(--color-border); /* full-width: exact computed */
 }
 
 .site-footer-nav {
@@ -584,13 +569,13 @@ body {
    Space above (from image): 100px via .site-content--home padding-bottom.
    Space below (to divider): 100px via padding-bottom — equal = quote is centered. */
 .footer-quote {
-  font-family: 'Lora', Georgia, serif;
-  font-style: italic;
+  font-family: 'Montserrat', sans-serif; /* proxima-nova substitute; NOT Lora */
+  font-style: normal;                    /* NOT italic */
   font-size: 14px;
   line-height: 1.8;
   color: var(--color-text-medium);
   text-align: center;
-  padding: 0 60px 60px;        /* 60px below = gap to footer divider line */
+  padding: 0 60px 60px;
   margin: 0;
   letter-spacing: 0.01em;
 }
@@ -622,8 +607,7 @@ body {
   .site-content { padding: 28px 24px 40px; }
   .page-hero    { margin: 0 -24px 28px; }
   .photo-grid   { margin: 0 -24px; grid-template-columns: repeat(2, 1fr); }
-  .site-footer  { padding: 40px 24px; }
-  .site-footer::before { left: 24px; right: 24px; }
+  .site-footer  { padding: 40px 0; }
   .footer-quote { padding: 0 24px 40px; }
   .site-nav     { margin-top: 28px; }
   .site-nav ul li + li { margin-left: 20px; }
