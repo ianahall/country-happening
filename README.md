@@ -22,4 +22,4 @@ The name was inspired by a 1967 event hosted by architect Philip Johnson at the 
 
 ## Viewing
 
-This site is hosted on [GitHub Pages](https://ianhall.github.io/country-happening/) (or open `index.html` locally).
+This site is hosted on [GitHub Pages](https://ianahall.github.io/country-happening/) (or open `index.html` locally).
