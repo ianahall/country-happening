@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSVP — Country Happening</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP &mdash; Country Happening</title>
+  <meta name="description" content="The original RSVP form for Ian & Kellyn's wedding, preserved for posterity.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,61 +24,57 @@
           <li><a href="itinerary.html">Itinerary</a></li>
           <li><a href="getting-there.html">Getting There</a></li>
           <li><a href="having-fun.html">Having Fun</a></li>
-          <li><a href="rsvp.html" class="active">RSVP</a></li>
+          <li><a href="rsvp.html" aria-current="page">RSVP</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="site-content">
       <figure class="page-hero">
-        <img src="images/stonewall-cropped-picture.jpg" alt="Kellyn and Ian monkeying around over at Jeff and Cindy's in Jane Lew.">
+        <img src="images/rsvp.jpg" alt="Ian hugging Kellyn from behind in a backyard at golden hour, both laughing" width="1800" height="1203">
         <figcaption>Kellyn and Ian monkeying around over at Jeff and Cindy&rsquo;s in Jane Lew.</figcaption>
       </figure>
 
-      <div class="archived-notice">
-        <p><strong>The wedding was September 12, 2015 &mdash; and it was wonderful!</strong><br>
-        This RSVP form is preserved here for posterity. Thank you to everyone who came and celebrated with us.</p>
-      </div>
-
       <p class="lead">Are you down with RSVP? If so, please do so by May 29th, 2015. This will help us know how many hay bales we need for you all to sit on.</p>
 
-      <form>
+      <p class="archived-notice">The wedding happened on September 12, 2015, and it was wonderful. The form below is closed, but it&rsquo;s kept here for posterity. Thank you to everyone who came and celebrated with us.</p>
+
+      <form class="rsvp-form" aria-label="RSVP (closed)">
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" autocomplete="off" disabled>
+        </div>
+
         <div class="form-row">
           <div class="form-field">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="First" disabled>
+            <input type="text" id="fname" name="fname" autocomplete="off" disabled>
           </div>
           <div class="form-field">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Last" disabled>
+            <input type="text" id="lname" name="lname" autocomplete="off" disabled>
           </div>
-        </div>
-
-        <div class="form-field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" disabled>
         </div>
 
         <div class="form-field">
           <label for="attending">Are you attending?</label>
-          <input type="text" id="attending" name="attending" placeholder="Yes / No / Maybe so" disabled>
+          <input type="text" id="attending" name="attending" autocomplete="off" disabled>
         </div>
 
         <div class="form-field">
           <label for="guests">Who else is coming with you?</label>
-          <input type="text" id="guests" name="guests" placeholder="Plus ones, kids, pets..." disabled>
+          <input type="text" id="guests" name="guests" autocomplete="off" disabled>
         </div>
 
         <div class="form-field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Say something nice..." disabled></textarea>
+          <textarea id="message" name="message" disabled></textarea>
         </div>
 
-        <button type="button" class="btn-submit" disabled style="opacity:0.5;cursor:not-allowed;">RSVP (Closed)</button>
+        <button type="button" class="btn-submit" disabled>RSVP (Closed)</button>
       </form>
     </main>
 
-    <p class="footer-quote">"Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River..." - John Denver</p>
     <footer class="site-footer">
       <nav class="site-footer-nav" aria-label="Footer primary">
         <ul>
@@ -92,6 +94,7 @@
           <li><a href="updates.html">Updates</a></li>
         </ul>
       </nav>
+      <p class="site-colophon">Married September 12, 2015 &middot; Roanoke, West Virginia</p>
     </footer>
 
   </div>

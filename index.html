@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Country Happening</title>
+  <meta name="description" content="Ian & Kellyn got hitched in the hills of West Virginia on September 12, 2015. The wedding website, preserved.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,15 +29,17 @@
       </nav>
     </header>
 
-    <!-- Homepage: full-bleed dog illustration, no padding -->
     <main class="site-content site-content--home">
       <div class="hero-dog">
-        <img class="dog-front" src="images/white_front.jpg" alt="Tay, peeking over a fence from the front">
-        <img class="dog-back"  src="images/white_back.jpg"  alt="Tay, seen from the back">
+        <img class="dog-front" src="images/white_front.jpg" width="1399" height="1678" alt="Illustration of Tater the dog, in a bow tie, peeking over a wooden fence">
+        <img class="dog-back" src="images/white_back.jpg" width="1399" height="1678" alt="" aria-hidden="true">
       </div>
+      <blockquote class="home-quote">
+        &ldquo;Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River&hellip;&rdquo;
+        <cite>John Denver</cite>
+      </blockquote>
     </main>
 
-      <p class="footer-quote">"Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River..." - John Denver</p>
     <footer class="site-footer">
       <nav class="site-footer-nav" aria-label="Footer primary">
         <ul>
@@ -51,28 +59,9 @@
           <li><a href="updates.html">Updates</a></li>
         </ul>
       </nav>
+      <p class="site-colophon">Married September 12, 2015 &middot; Roanoke, West Virginia</p>
     </footer>
 
   </div>
-
-  <script>
-    // Swap front/back dog illustration every 10 seconds with a 1s crossfade
-    const front = document.querySelector('.dog-front');
-    const back  = document.querySelector('.dog-back');
-    let showingFront = true;
-
-    setInterval(() => {
-      front.style.transition = 'opacity 1s ease';
-      back.style.transition  = 'opacity 1s ease';
-      if (showingFront) {
-        front.style.opacity = '0';
-        back.style.opacity  = '1';
-      } else {
-        front.style.opacity = '1';
-        back.style.opacity  = '0';
-      }
-      showingFront = !showingFront;
-    }, 10000);
-  </script>
 </body>
 </html>

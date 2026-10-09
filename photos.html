@@ -1,52 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photos — Country Happening</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photos &mdash; Country Happening</title>
+  <meta name="description" content="Ian & Kellyn through the years: a gallery from the wedding website.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.88);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      object-fit: contain;
-      display: block;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 20px; right: 28px;
-      color: #fff;
-      font-size: 2rem;
-      cursor: pointer;
-      line-height: 1;
-      background: none;
-      border: none;
-      font-family: inherit;
-    }
-    .lightbox-prev, .lightbox-next {
-      position: absolute;
-      top: 50%; transform: translateY(-50%);
-      color: #fff;
-      font-size: 2rem;
-      cursor: pointer;
-      background: rgba(0,0,0,0.3);
-      border: none;
-      padding: 12px 18px;
-      font-family: inherit;
-    }
-    .lightbox-prev { left: 16px; }
-    .lightbox-next { right: 16px; }
-  </style>
 </head>
 <body>
   <div class="page-wrapper">
@@ -65,81 +29,85 @@
       </nav>
     </header>
 
-    <main class="site-content" style="padding-top:16px;padding-bottom:0;">
+    <main class="site-content site-content--photos">
       <div class="photo-grid" id="photoGrid">
-        <img src="images/photos/IMG_3111.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/032_32.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_8411.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_7226.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_6611.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF3781.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF5328.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0413.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF2191-001.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/R1-03225-0024.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_2469.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/016_16.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_1390.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/1.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_1317.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_5976.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_6211.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_6634.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_8995.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_6177.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_8662.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0408.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0493.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_2171.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0441.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/017_17.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF3461.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0400.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_1314.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_4675.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_3462.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_5673.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/A00018_018.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_1994.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_6074.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF9071.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/007_7.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_3418.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0385.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_1588.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_5576.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_4830.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0671.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_3216.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/319858-R1-3.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/038_38.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_7105HALLOWEEN.png.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_4242.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0861.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/015_15.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0023.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0199.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF5311.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_7112.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/R1-01982-0004.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/R1-01982-0015.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_2115.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/022_22.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/hall112-R1-000-22-22A.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/wellington.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/2.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/DSCF7910.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/_MG_6888a.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/R1-03320-023A.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/R1-08753-0027.jpg" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0017.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0397.JPG" alt="Ian and Kellyn" loading="lazy">
-        <img src="images/photos/IMG_0419.JPG" alt="Ian and Kellyn" loading="lazy">
+        <a href="images/photos/IMG_7105HALLOWEEN.png.jpg"><img src="images/photos/IMG_7105HALLOWEEN.png.jpg" alt="Ian and Kellyn through the years, photo 1 of 73" width="1800" height="1312" decoding="async"></a>
+        <a href="images/photos/IMG_4242.JPG"><img src="images/photos/IMG_4242.JPG" alt="Ian and Kellyn through the years, photo 2 of 73" width="1800" height="1350" decoding="async"></a>
+        <a href="images/photos/DSCF5311.JPG"><img src="images/photos/DSCF5311.JPG" alt="Ian and Kellyn through the years, photo 3 of 73" width="1800" height="1195" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_6634.JPG"><img src="images/photos/IMG_6634.JPG" alt="Ian and Kellyn through the years, photo 4 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_7226.JPG"><img src="images/photos/_MG_7226.JPG" alt="Ian and Kellyn through the years, photo 5 of 73" width="1200" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF3461.JPG"><img src="images/photos/DSCF3461.JPG" alt="Ian and Kellyn through the years, photo 6 of 73" width="1800" height="1195" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF2191-001.JPG"><img src="images/photos/DSCF2191-001.JPG" alt="Ian and Kellyn through the years, photo 7 of 73" width="1800" height="1195" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_2171.JPG"><img src="images/photos/_MG_2171.JPG" alt="Ian and Kellyn through the years, photo 8 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_5576.JPG"><img src="images/photos/IMG_5576.JPG" alt="Ian and Kellyn through the years, photo 9 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/1.jpg"><img src="images/photos/1.jpg" alt="Ian and Kellyn through the years, photo 10 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0400.JPG"><img src="images/photos/IMG_0400.JPG" alt="Ian and Kellyn through the years, photo 11 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0441.JPG"><img src="images/photos/IMG_0441.JPG" alt="Ian and Kellyn through the years, photo 12 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_3216.JPG"><img src="images/photos/_MG_3216.JPG" alt="Ian and Kellyn through the years, photo 13 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/319858-R1-3.jpg"><img src="images/photos/319858-R1-3.jpg" alt="Ian and Kellyn through the years, photo 14 of 73" width="1215" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_3418.JPG"><img src="images/photos/IMG_3418.JPG" alt="Ian and Kellyn through the years, photo 15 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_5673.JPG"><img src="images/photos/IMG_5673.JPG" alt="Ian and Kellyn through the years, photo 16 of 73" width="1280" height="960" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_4675.JPG"><img src="images/photos/_MG_4675.JPG" alt="Ian and Kellyn through the years, photo 17 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_6177.JPG"><img src="images/photos/_MG_6177.JPG" alt="Ian and Kellyn through the years, photo 18 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_1588.JPG"><img src="images/photos/_MG_1588.JPG" alt="Ian and Kellyn through the years, photo 19 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF6072-120.jpg"><img src="images/photos/DSCF6072-120.jpg" alt="Ian and Kellyn through the years, photo 20 of 73" width="1800" height="1195" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF5328.JPG"><img src="images/photos/DSCF5328.JPG" alt="Ian and Kellyn through the years, photo 21 of 73" width="1195" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_4830.JPG"><img src="images/photos/IMG_4830.JPG" alt="Ian and Kellyn through the years, photo 22 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/017_17.JPG"><img src="images/photos/017_17.JPG" alt="Ian and Kellyn through the years, photo 23 of 73" width="1184" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_1317.JPG"><img src="images/photos/_MG_1317.JPG" alt="Ian and Kellyn through the years, photo 24 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0413.JPG"><img src="images/photos/IMG_0413.JPG" alt="Ian and Kellyn through the years, photo 25 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0493.JPG"><img src="images/photos/IMG_0493.JPG" alt="Ian and Kellyn through the years, photo 26 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0408.JPG"><img src="images/photos/IMG_0408.JPG" alt="Ian and Kellyn through the years, photo 27 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_3462.JPG"><img src="images/photos/_MG_3462.JPG" alt="Ian and Kellyn through the years, photo 28 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_1390.JPG"><img src="images/photos/_MG_1390.JPG" alt="Ian and Kellyn through the years, photo 29 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0023.JPG"><img src="images/photos/IMG_0023.JPG" alt="Ian and Kellyn through the years, photo 30 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0199.JPG"><img src="images/photos/IMG_0199.JPG" alt="Ian and Kellyn through the years, photo 31 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/A00018_018.jpg"><img src="images/photos/A00018_018.jpg" alt="Ian and Kellyn through the years, photo 32 of 73" width="1800" height="1192" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_2115.JPG"><img src="images/photos/IMG_2115.JPG" alt="Ian and Kellyn through the years, photo 33 of 73" width="1350" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0385.JPG"><img src="images/photos/IMG_0385.JPG" alt="Ian and Kellyn through the years, photo 34 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_6611.JPG"><img src="images/photos/IMG_6611.JPG" alt="Ian and Kellyn through the years, photo 35 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-05724-0020.jpg"><img src="images/photos/R1-05724-0020.jpg" alt="Ian and Kellyn through the years, photo 36 of 73" width="1800" height="1204" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_6074.JPG"><img src="images/photos/IMG_6074.JPG" alt="Ian and Kellyn through the years, photo 37 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_6211.JPG"><img src="images/photos/IMG_6211.JPG" alt="Ian and Kellyn through the years, photo 38 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_1994.JPG"><img src="images/photos/IMG_1994.JPG" alt="Ian and Kellyn through the years, photo 39 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF9071.JPG"><img src="images/photos/DSCF9071.JPG" alt="Ian and Kellyn through the years, photo 40 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_6888a.jpg"><img src="images/photos/_MG_6888a.jpg" alt="Ian and Kellyn through the years, photo 41 of 73" width="1800" height="1287" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0671.JPG"><img src="images/photos/IMG_0671.JPG" alt="Ian and Kellyn through the years, photo 42 of 73" width="1350" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-03320-023A.jpg"><img src="images/photos/R1-03320-023A.jpg" alt="Ian and Kellyn through the years, photo 43 of 73" width="1200" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0861.JPG"><img src="images/photos/IMG_0861.JPG" alt="Ian and Kellyn through the years, photo 44 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/022_22.JPG"><img src="images/photos/022_22.JPG" alt="Ian and Kellyn through the years, photo 45 of 73" width="1193" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/007_7.JPG"><img src="images/photos/007_7.JPG" alt="Ian and Kellyn through the years, photo 46 of 73" width="1203" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/015_15.JPG"><img src="images/photos/015_15.JPG" alt="Ian and Kellyn through the years, photo 47 of 73" width="1800" height="1193" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_2469.JPG"><img src="images/photos/_MG_2469.JPG" alt="Ian and Kellyn through the years, photo 48 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/032_32.JPG"><img src="images/photos/032_32.JPG" alt="Ian and Kellyn through the years, photo 49 of 73" width="1193" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/016_16.JPG"><img src="images/photos/016_16.JPG" alt="Ian and Kellyn through the years, photo 50 of 73" width="1800" height="1193" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_8662.jpg"><img src="images/photos/IMG_8662.jpg" alt="Ian and Kellyn through the years, photo 51 of 73" width="1199" height="1800" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_8411.JPG"><img src="images/photos/_MG_8411.JPG" alt="Ian and Kellyn through the years, photo 52 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF3781.JPG"><img src="images/photos/DSCF3781.JPG" alt="Ian and Kellyn through the years, photo 53 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/038_38.JPG"><img src="images/photos/038_38.JPG" alt="Ian and Kellyn through the years, photo 54 of 73" width="1800" height="1193" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_7112.JPG"><img src="images/photos/IMG_7112.JPG" alt="Ian and Kellyn through the years, photo 55 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_5976.JPG"><img src="images/photos/_MG_5976.JPG" alt="Ian and Kellyn through the years, photo 56 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_3111.JPG"><img src="images/photos/IMG_3111.JPG" alt="Ian and Kellyn through the years, photo 57 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-08753-0027.jpg"><img src="images/photos/R1-08753-0027.jpg" alt="Ian and Kellyn through the years, photo 58 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-01982-0004.jpg"><img src="images/photos/R1-01982-0004.jpg" alt="Ian and Kellyn through the years, photo 59 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/hall112-R1-000-22-22A.jpg"><img src="images/photos/hall112-R1-000-22-22A.jpg" alt="Ian and Kellyn through the years, photo 60 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-15A.jpg"><img src="images/photos/R1-15A.jpg" alt="Ian and Kellyn through the years, photo 61 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/4.jpg"><img src="images/photos/4.jpg" alt="Ian and Kellyn through the years, photo 62 of 73" width="1800" height="1204" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-03225-0024.jpg"><img src="images/photos/R1-03225-0024.jpg" alt="Ian and Kellyn through the years, photo 63 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_1314.JPG"><img src="images/photos/_MG_1314.JPG" alt="Ian and Kellyn through the years, photo 64 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/wellington.jpg"><img src="images/photos/wellington.jpg" alt="Ian and Kellyn through the years, photo 65 of 73" width="1800" height="1282" loading="lazy" decoding="async"></a>
+        <a href="images/photos/_MG_8995.JPG"><img src="images/photos/_MG_8995.JPG" alt="Ian and Kellyn through the years, photo 66 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-03319-013A.jpg"><img src="images/photos/R1-03319-013A.jpg" alt="Ian and Kellyn through the years, photo 67 of 73" width="1800" height="2700" loading="lazy" decoding="async"></a>
+        <a href="images/photos/R1-01982-0015.jpg"><img src="images/photos/R1-01982-0015.jpg" alt="Ian and Kellyn through the years, photo 68 of 73" width="1800" height="1215" loading="lazy" decoding="async"></a>
+        <a href="images/photos/2.jpg"><img src="images/photos/2.jpg" alt="Ian and Kellyn through the years, photo 69 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/DSCF7910.JPG"><img src="images/photos/DSCF7910.JPG" alt="Ian and Kellyn through the years, photo 70 of 73" width="1800" height="1195" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0017.JPG"><img src="images/photos/IMG_0017.JPG" alt="Ian and Kellyn through the years, photo 71 of 73" width="1800" height="1200" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0397.JPG"><img src="images/photos/IMG_0397.JPG" alt="Ian and Kellyn through the years, photo 72 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
+        <a href="images/photos/IMG_0419.JPG"><img src="images/photos/IMG_0419.JPG" alt="Ian and Kellyn through the years, photo 73 of 73" width="1800" height="1350" loading="lazy" decoding="async"></a>
       </div>
     </main>
 
-    <p class="footer-quote">"Almost heaven, West Virginia, Blue Ridge Mountains, Shenandoah River..." - John Denver</p>
-    <footer class="site-footer" style="margin-top:40px;">
+    <footer class="site-footer">
       <nav class="site-footer-nav" aria-label="Footer primary">
         <ul>
           <li><a href="wedding.html">Our Wedding</a></li>
@@ -158,45 +126,66 @@
           <li><a href="updates.html">Updates</a></li>
         </ul>
       </nav>
+      <p class="site-colophon">Married September 12, 2015 &middot; Roanoke, West Virginia</p>
     </footer>
 
   </div>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">&times;</button>
-    <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&#8249;</button>
     <img src="" alt="" id="lightboxImg">
-    <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+    <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Next photo">&#8250;</button>
+    <p class="lightbox-count" id="lightboxCount" aria-live="polite"></p>
   </div>
 
   <script>
-    const grid = document.getElementById('photoGrid');
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightboxImg');
-    const imgs = Array.from(grid.querySelectorAll('img'));
-    let current = 0;
+    (() => {
+      const links = Array.from(document.querySelectorAll('#photoGrid a'));
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const count = document.getElementById('lightboxCount');
+      let current = 0;
+      let returnFocus = null;
 
-    function open(idx) {
-      current = idx;
-      lbImg.src = imgs[idx].src;
-      lbImg.alt = imgs[idx].alt;
-      lightbox.classList.add('open');
-    }
+      function show(i) {
+        current = (i + links.length) % links.length;
+        const source = links[current].querySelector('img');
+        img.src = links[current].href;
+        img.alt = source.alt;
+        count.textContent = (current + 1) + ' / ' + links.length;
+        // Warm the cache for the neighbours so arrowing feels instant.
+        [current + 1, current - 1].forEach(n => { new Image().src = links[(n + links.length) % links.length].href; });
+      }
 
-    function close() { lightbox.classList.remove('open'); }
+      function openAt(i, trigger) {
+        returnFocus = trigger;
+        show(i);
+        box.hidden = false;
+        box.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('lightboxClose').focus();
+      }
 
-    imgs.forEach((img, i) => img.addEventListener('click', () => open(i)));
-    document.getElementById('lightboxClose').addEventListener('click', close);
-    document.getElementById('lightboxPrev').addEventListener('click', () => open((current - 1 + imgs.length) % imgs.length));
-    document.getElementById('lightboxNext').addEventListener('click', () => open((current + 1) % imgs.length));
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-    document.addEventListener('keydown', e => {
-      if (!lightbox.classList.contains('open')) return;
-      if (e.key === 'Escape') close();
-      if (e.key === 'ArrowLeft') open((current - 1 + imgs.length) % imgs.length);
-      if (e.key === 'ArrowRight') open((current + 1) % imgs.length);
-    });
+      function closeBox() {
+        box.classList.remove('is-open');
+        box.hidden = true;
+        document.body.style.overflow = '';
+        if (returnFocus) returnFocus.focus();
+      }
+
+      links.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); openAt(i, a); }));
+      document.getElementById('lightboxClose').addEventListener('click', closeBox);
+      document.getElementById('lightboxPrev').addEventListener('click', () => show(current - 1));
+      document.getElementById('lightboxNext').addEventListener('click', () => show(current + 1));
+      box.addEventListener('click', e => { if (e.target === box) closeBox(); });
+      document.addEventListener('keydown', e => {
+        if (box.hidden) return;
+        if (e.key === 'Escape') closeBox();
+        else if (e.key === 'ArrowLeft') show(current - 1);
+        else if (e.key === 'ArrowRight') show(current + 1);
+      });
+    })();
   </script>
 </body>
 </html>
