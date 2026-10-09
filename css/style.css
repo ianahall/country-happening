@@ -164,17 +164,29 @@ body::before {
   line-height: 0;
 }
 
+/* Front and back take turns on a 20s cycle. One fades fully out before
+   the other fades in, so the two drawings never blend into each other. */
+.hero-dog .dog-front {
+  animation: dog-front 20s linear infinite;
+}
+
 .hero-dog .dog-back {
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: dog-swap 20s ease-in-out infinite;
+  animation: dog-back 20s linear infinite;
 }
 
-@keyframes dog-swap {
-  0%, 45%   { opacity: 0; }
-  50%, 95%  { opacity: 1; }
-  100%      { opacity: 0; }
+@keyframes dog-front {
+  0%, 45%   { opacity: 1; }
+  48%, 97%  { opacity: 0; }
+  100%      { opacity: 1; }
+}
+
+@keyframes dog-back {
+  0%, 48%   { opacity: 0; }
+  51%, 94%  { opacity: 1; }
+  97%, 100% { opacity: 0; }
 }
 
 .home-quote {
@@ -774,5 +786,5 @@ body::before {
 /* ─── Motion preferences ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
-  .hero-dog .dog-back { animation: none; }
+  .hero-dog .dog-front, .hero-dog .dog-back { animation: none; }
 }
